@@ -20,7 +20,7 @@ var IndecisionApp = function (_React$Component) {
     _this.handlePick = _this.handlePick.bind(_this);
     _this.handleAddOption = _this.handleAddOption.bind(_this);
     _this.state = {
-      options: []
+      options: props.options
     };
     return _this;
   }
@@ -68,7 +68,7 @@ var IndecisionApp = function (_React$Component) {
       return React.createElement(
         'div',
         null,
-        React.createElement(Header, { title: title, subtitle: subtitle }),
+        React.createElement(Header, { subtitle: subtitle }),
         React.createElement(Action, { hasOptions: this.state.options.length > 0, handlePick: this.handlePick }),
         React.createElement(Options, { options: this.state.options,
           handleDeleteOptions: this.handleDeleteOptions
@@ -81,6 +81,10 @@ var IndecisionApp = function (_React$Component) {
   return IndecisionApp;
 }(React.Component);
 
+IndecisionApp.defaultProps = {
+  options: []
+};
+
 var Header = function Header(props) {
   return React.createElement(
     'div',
@@ -90,7 +94,7 @@ var Header = function Header(props) {
       null,
       props.title
     ),
-    React.createElement(
+    props.subtitle && React.createElement(
       'h2',
       null,
       props.subtitle
@@ -98,6 +102,9 @@ var Header = function Header(props) {
   );
 };
 
+Header.defaultProps = {
+  title: 'Indecision'
+};
 var Action = function Action(props) {
   return React.createElement(
     'div',
@@ -208,4 +215,4 @@ var User = function User(props) {
   );
 };
 
-ReactDOM.render(React.createElement(IndecisionApp, null), document.getElementById('app'));
+ReactDOM.render(React.createElement(IndecisionApp, { options: ['hong kong', 'singapore'] }), document.getElementById('app'));
