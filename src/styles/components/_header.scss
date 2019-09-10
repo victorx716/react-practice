@@ -18,3 +18,8 @@
   margin: 0;
 }
 
+@media (min-width: $desktop) {
+  .header {
+    margin-bottom: $xl-size;
+  }
+}

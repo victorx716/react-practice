@@ -7,4 +7,11 @@ body {
   font-size: $m-size;
 }
 
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
 // 1 rem equals 16 px

@@ -1,0 +1,24 @@
+.widget-header {
+  background: $blue;
+  color: $off-white;
+  padding: $m-size;
+  display: flex;
+  justify-content: space-between;
+}
+
+.widget-title {
+  margin: none;
+}
+
+.widget {
+  background: $light-blue;
+  margin-bottom: $xl-size;
+}
+
+.widget-message {
+  color: $off-white;
+  padding: $l-size;
+  margin: none;
+  text-align: center;
+  border-bottom: 1px solid lighten($light-blue, 10);
+}
