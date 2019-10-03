@@ -10,7 +10,7 @@ const Header = (props) => (
 )
 
 Header.defaultProps = {
-  title: 'Indecision'
+  title: 'Shopping List'
 }
 
 module.exports = Header;

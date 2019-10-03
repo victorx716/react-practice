@@ -73,8 +73,8 @@ class IndecisionApp extends React.Component {
   }
 
   render() {
-    const title = 'Indecision';
-    const subtitle = 'This will auto-choose for ya';
+    const title = 'Groceries';
+    const subtitle = 'What should I buy?';
 
     return (
       <div>
